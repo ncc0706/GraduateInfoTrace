@@ -27,12 +27,16 @@
 #### 教师界面
 默认统计所有学生数据并可视化  
 ![Alt Text](./imgs/sort-all.png)
+
 按毕业生毕业时间进行统计并可视化  
 ![Alt Text](./imgs/sort-by-time.png)
+
 按毕业生就业公司进行统计并可视化  
 ![Alt Text](./imgs/sort-by-company.png)
+
 按毕业生就业地点进行统计并可视化  
 ![Alt Text](./imgs/china-map.png)
+
 按教师输入进行实时检索  
 ![Alt Text](./imgs/search.png)
 
