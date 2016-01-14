@@ -1,0 +1,208 @@
+body {
+    margin: 0px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+input {
+    width: 75px;
+}
+
+.show .edit, .editing .disp {
+    display: none;
+}
+
+.show .disp, .editing .edit {
+    display: block;
+}
+
+.unshow {
+    display: none;
+}
+
+/* the header*/
+#app .header {
+    height: 50px;
+    background: #F9F9F9;
+    vertical-align: middle;
+}
+
+#app .header .content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+    height: 50px;
+}
+
+#app .header .content .logo {
+    margin-top: 5px;
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+}
+
+#app .header .content .welcome {
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+#more {
+    float: right;
+    margin-top: 10px;
+    position: relative;
+}
+
+#more .title {
+    float: right;
+    margin-top: 5px;
+    border: none;
+    width: 75px;
+    height: 35px;
+}
+
+#more .ops {
+    z-index: 9999;
+    float: right;
+    width: 100px;
+    margin-top: 5px;
+    padding-top: 5px;
+    border: #F9F9F9 solid 1px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.15);
+    clear: both;
+    position: relative;
+    left: -15px;
+    top: -5px;
+}
+
+#app .header .content .ops button {
+    font-size: 12px;
+    width: 100px;
+    height: 35px;
+    border: none;
+    background: white;
+    text-align: left;
+    outline: 0;
+}
+
+#app .header .content .ops button:hover {
+    background: #4078C0;
+    color: white;
+}
+
+#app .header .content .ops .bot {
+    width: 0px;
+    height: 0px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent white;
+    position: absolute;
+    top: -20px;
+    left: 45px;
+}
+
+/* the main */
+#app .main {
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px;
+    width: 900px;
+    position: relative;
+}
+
+#users-show {
+    list-style-type: none;
+    margin-top: 0px;
+    width: 600px;
+    border: 1px solid #D8DEE2;
+    border-radius: 5px;
+}
+
+#users-show li {
+    margin: 5px 5px 5px 5px;
+}
+
+#users-show .cname {
+    text-align: center;
+    font-size: 18px;
+}
+
+#users-show .title {
+    background-color: #eee;
+    height: 40px;
+    line-height: 40px;
+    margin: 0px;
+    text-align: center;
+}
+
+#users-show .info {
+    border-bottom: dashed 1px #ccc;
+    height: 40px;
+    line-height: 40px;
+    margin: 0px;
+    text-align: center;
+}
+
+#users-show li span {
+    padding-left: 10px;
+    width: 125px;
+    float: left;
+}
+
+#user-add {
+    border: 1px solid #D8DEE2;
+    border-radius: 5px;
+    width: 285px;
+    position: absolute;
+    left: 610px;
+    top: 0px;
+}
+
+#user-add .add-title {
+    margin-top: 0px;
+    background: #eee;
+    height: 35px;
+    line-height: 35px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#user-add .add {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+#addUser {
+    position: relative;
+    width: 65px;
+    height: 65px;
+    top: -70px;
+    left: 200px;
+}
+
+.admin {
+    border: 1px solid #D8DEE2;
+    border-radius: 5px;
+    width: 400px;
+    height: 100px;
+    padding-bottom: 25px;
+}
+
+.admin .title {
+    height: 40px;
+    line-height: 40px;
+    margin: 0px;
+    background-color: #eee;
+    text-align: center;
+}
+.admin .info {
+    margin-left: 25px;
+}
+
+#footer {
+    padding-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: #9B9B9B;
+}

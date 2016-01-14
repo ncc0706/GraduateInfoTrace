@@ -1,0 +1,383 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.unshow {
+    display: none;
+}
+
+/* the header*/
+#app .header {
+    height: 50px;
+    background: #F9F9F9;
+    vertical-align: middle;
+}
+
+#app .header .content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+    height: 50px;
+}
+
+#app .header .content .logo {
+    margin-top: 5px;
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+}
+
+#app .header .content .welcome {
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+#more {
+    float: right;
+    margin-top: 10px;
+    position: relative;
+}
+
+#more .title {
+    float: right;
+    margin-top: 5px;
+    border: none;
+    width: 75px;
+    height: 35px;
+}
+
+#more .ops {
+    z-index: 9999;
+    float: right;
+    width: 100px;
+    margin-top: 5px;
+    padding-top: 5px;
+    border: #F9F9F9 solid 1px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.15);
+    clear: both;
+    position: relative;
+    left: -15px;
+    top: -5px;
+}
+
+#app .header .content .ops button {
+    font-size: 12px;
+    width: 100px;
+    height: 35px;
+    border: none;
+    background: white;
+    text-align: left;
+    outline: 0;
+}
+
+#app .header .content .ops button:hover {
+    background: #4078C0;
+    color: white;
+}
+
+#app .header .content .ops .bot {
+    width: 0px;
+    height: 0px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent white;
+    position: absolute;
+    top: -20px;
+    left: 45px;
+}
+
+/* the main*/
+#app .main {
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+}
+
+#app .main .teacher {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    width: 900px;
+    position: relative;
+}
+
+.teacherinfo .items {
+    border: 1px solid #D8DEE2;
+    border-radius: 5px;
+    margin-top: 35px;
+    width: 500px;
+}
+
+.teacherinfo .items p {
+    margin-top: 0px;
+    text-align: center;
+    font-size: 15px;
+    height: 45px;
+    line-height: 45px;
+    background-color:#eee;
+}
+
+.items .title {
+    font-weight: bold;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.static {
+    font-size: 14px;
+    margin-left: 20px;
+}
+
+.info .disp, .editing .edit{
+    font-size: 14px;
+    margin-left: 20px;
+}
+
+.info .edit, .editing .disp {
+    display: none;
+}
+
+#save {
+    background-color: #60B044;
+    border-radius: 5px;
+    color: white;
+    border: 1px solid #5CA941;
+    margin-top: 20px;
+    width: 100px;
+    height: 35px;
+}
+
+#save :hover {
+    background-color: #5CA941;
+}
+
+.pic {
+    width: 150px;
+    height: 175px;
+    position: absolute;
+    top: -0px;
+    left: 650px;
+}
+
+#avatar {
+    border: 1px solid #D8DEE2;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 125px;
+    height: 125px;
+}
+
+#file {
+    margin-left: auto;
+    margin-right: auto;
+    width: 125px;
+    height: 125px;
+    top: -0px;
+    left: 15px;
+    position: absolute;
+    opacity: 0;
+}
+
+#setPic {
+    background-color: #60B044;
+    border-radius: 5px;
+    color: white;
+    border: 1px solid #5CA941;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    width: 125px;
+    height: 35px;
+}
+
+#setPic :hover {
+    background-color: #5CA941;
+}
+
+/* the search view*/
+#search {
+    width: 750px;
+    margin-top: 15px;
+    padding-bottom: 15px;
+    border: 1px solid #D8DEE2;
+    border-radius: 5px;
+}
+
+#search span {
+    margin-left: 25px;
+    font-size: 18px;
+    color: #9B9B9B;
+}
+
+#search .tips {
+    margin-left: 10px;
+    font-size: 14px;
+    color: #9B9B9B;
+}
+
+#search input {
+    width: 275px;
+    height: 30px;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+/* the student data*/
+#data{
+    list-style-type: none;
+    width: 750px;
+    margin-top: 15px;
+    border: 1px solid #D8DEE2;
+    border-radius: 5px;
+    float: left;
+}
+
+#data li {
+    margin: 5px 0px;
+}
+
+#data .title {
+    margin: 0px;
+    width: 750px;
+    height: 40px;
+}
+
+#data .title button {
+    background: #eee;
+    width: 150px;
+    height: 40px;
+    margin-top: 0px;
+    border: none;
+    text-align: center;
+    float: left;
+}
+
+#data .title button:hover {
+    background: #4078C0;
+    color: white;
+}
+
+
+#data .info {
+    border-bottom: dashed 1px #ccc;
+    height: 40px;
+    line-height: 40px;
+    margin: 0px;
+    text-align: center;
+}
+
+#data li span {
+    width: 150px;
+    float: left;
+}
+
+/* the footer */
+#footer {
+    padding-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: #9B9B9B;
+    clear: both;
+}
+
+/*the visual view*/
+.visual {
+    border: 1px solid #D8DEE2;
+    border-radius: 5px;
+    margin-top: 20px;
+    width: 900px;
+    height: 1050px;
+    position: relative;
+}
+
+.visual span {
+    font-size: 20px;
+    height: 100px;
+    line-height: 100px;
+    margin-left: 375px;
+}
+
+#time-company-tg {
+    width: 400px;
+    height: 300px;
+    position: absolute;
+}
+
+#time-company-pc {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    left: 400px;
+    top: 150px;
+}
+
+#time-company-lg {
+    width: 250px;
+    height: 300px;
+    position: absolute;
+    left: 675px;
+    top: 225px;
+}
+
+rect:hover {
+    fill: blue;
+}
+
+path {
+    stroke: #fff;
+}
+
+path:hover {
+    opacity: 0.9;
+}
+
+.axis path, .axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+.legend {
+    display: inline-block;
+    margin-bottom: 76px;
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+
+.legend td {
+    padding: 4px 5px;
+    vertical-align: bottom;
+}
+
+.legendAll, .legendPerc {
+    align: right;
+    width: 35px;
+}
+
+.legend tr {
+    border-bottom: 1px solid grey;
+}
+
+.legend tr:first-child {
+    border-top: 1px solid grey;
+}
+
+#company-location {
+    width: 900px;
+    position: absolute;
+    top: 400px;
+    left: 50px;
+}
+
+#company-location path {
+    stroke: #9B9B9B;
+}
+
+#company-location path:hover {
+    opacity: 0.9;
+}

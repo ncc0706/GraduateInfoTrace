@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <script src="/javascripts/jquery-min.js"></script>
+    <script src="/javascripts/underscore-min.js"></script>
+    <script src="/javascripts/backbone-min.js"></script>
+    <script src="/javascripts/login.js"></script>
+    <script type="text/javascript" src="/javascripts/keyboard.js"></script>
+    <link rel='stylesheet' href='/stylesheets/login.css'/>
+    <link rel='stylesheet' href='/stylesheets/keyboard.css'/>
+</head>
+<body>
+<div id="logo">
+</div>
+<p class="title">毕业生信息追踪系统</p>
+
+<div id="login">
+</div>
+<% include footer.ejs %>
+</body>
+<script type='text/template' id="tpl-login">
+    <form action="/login" method="post">
+        <input class="rad" type="radio" name="role" value="admin">管理员
+        <input class="rad" type="radio" name="role" value="student">学生
+        <input class="rad" type="radio" name="role" value="teacher">教师<br/>
+
+        <p>帐号</p>
+        <input class="txt" type="text" name="username"><br/>
+
+        <p>密码</p>
+        <input class="txt keyboard" type="password" name="password"><br/>
+
+        <p>验证码 <img id="code" src="/code/1"></p>
+        <input class="txt" type="text" name="veri"><br>
+        <input class="sub" type="submit" value="登   录">
+    </form>
+</script>
+</html>

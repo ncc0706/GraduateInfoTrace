@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <script src="/javascripts/jquery-min.js"></script>
+    <script src="/javascripts/underscore-min.js"></script>
+    <script src="/javascripts/backbone-min.js"></script>
+    <script src="/javascripts/backbone-localStorage-min.js"></script>
+    <script src="/javascripts/d3-min.js"></script>
+    <script src="/javascripts/visual.js"></script>
+    <script src="/javascripts/teacher.js"></script>
+    <link rel='stylesheet' href='/stylesheets/teacher.css'/>
+</head>
+<body>
+<div id="app">
+</div>
+<% include footer.ejs %>
+</body>
+<script type="text/template" id="tpl-more">
+    <div class="content">
+        <img class="logo" src="/images/logo.png">
+        <span class="welcome">欢迎，<%= name %><%= role %>!</span>
+
+        <div id="more">
+            <span class="title">更多</span>
+
+            <div class="ops unshow">
+                <span class="bot"></span>
+                <button id="ops-self">个人资料</button>
+                <button id="ops-stuts">就业信息</button>
+                <button id="ops-visual">就业总览</button>
+                <button id="ops-logout">注销</button>
+            </div>
+        </div>
+    </div>
+</script>
+<script type="text/template" id="tpl-stuts-search">
+    <div id="search">
+        <span>输入关键字</span><input id="words" type="text"><span class="tips">&nbsp;&nbsp;空格分隔</span>
+    </div>
+</script>
+<script type="text/template" id="tpl-stuts-title">
+    <li class="title">
+        <button id="uid">编&nbsp;&nbsp;&nbsp;&nbsp;号</button>
+        <button id="name">姓&nbsp;&nbsp;&nbsp;&nbsp;名</button>
+        <button id="time">毕业时间</button>
+        <button id="company">公&nbsp;&nbsp;&nbsp;&nbsp;司</button>
+        <button id="province">省&nbsp;&nbsp;&nbsp;&nbsp;份</button>
+    </li>
+</script>
+<script type="text/template" id="tpl-stuts">
+    <li class="info">
+        <span>{{id}}</span>
+        <span>{{name}}</span>
+        <span>{{time}}</span>
+        <span>{{company}}</span>
+        <span>{{province}}</span>
+    </li>
+</script>
+<script type="text/template" id="tpl-infos">
+
+    <div class="items">
+        <p>基本信息</p>
+        <span class="title">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</span>
+        <span class="static">{{name}}</span><br>
+        <br>
+
+        <span class="title">邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱</span>
+        <span class="info">
+            <span class="disp">{{email}}</span>
+            <span class="edit">
+                <input class="info" type="email" name="email" id="email">
+            </span>
+        </span><br>
+        <br>
+
+        <span class="title">电&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;话</span>
+        <span class="info">
+            <span class="disp">{{phone}}</span>
+            <span class="edit">
+                <input class="info" type="text" name="phone" id="phone" pattern="[0-9]{11}">
+            </span>
+        </span><br>
+        <br>
+    </div>
+
+    <div class="items">
+        <p>学院信息</p>
+        <span class="title">学&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;院</span>
+        <span class="info">
+            <span class="disp">{{academy}}</span>
+            <span class="edit">
+                <select class="info" name="academy" id="academy">
+                    <option value="机械与汽车工程学院">机械与汽车工程学院</option>
+                    <option value="电气与自动化工程学院">电气与自动化工程学院</option>
+                    <option value="计算机与信息学院">计算机与信息学院</option>
+                    <option value="管理学院">管理学院</option>
+                    <option value="数学学院">数学学院</option>
+                    <option value="外国语学院">外国语学院</option>
+                    <option value="马克思主义学院">马克思主义学院</option>
+                </select>
+            </span>
+        </span><br>
+        <br>
+    </div>
+
+    <button id="save">更新信息</button>
+
+</script>
+<script type="text/template" id="tpl-visual">
+    <span>毕业生就业信息总览</span>
+    <div id="time-company-tg"></div>
+    <div id="time-company-pc"></div>
+    <div id="time-company-lg"></div>
+    <div id="company-location"></div>
+</script>
+<script type="text/template" id="tpl-pics">
+    <form id="uploadPic">
+        <img id="avatar" src="/avatar/1"/>
+        <input id="file" type="file" name="file"/>
+        <input id="setPic" type="button" value="设置头像">
+    </form>
+</script>
+</html>

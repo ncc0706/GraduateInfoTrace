@@ -1,0 +1,62 @@
+body
+{
+    padding: 25px;
+    background: #F9F9F9;
+    font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+#header
+{
+    margin-left: 50px;
+    margin-right: 50px;
+    height: 75px;
+    vertical-align: middle;
+}
+#logo
+{
+    width: 75px;
+    height: 75px;
+    vertical-align: middle;
+}
+#title
+{
+    margin-left: 25px;
+    font-size: 35px;
+    vertical-align: middle;
+}
+#login
+{
+    background-color: #60B044;
+    border-radius: 5px;
+    color: white;
+    border: 1px solid #5CA941;
+    width: 100px;
+    height: 35px;
+    margin-top: 25px;
+    margin-right: 10px;
+    float: right;
+}
+#login:hover
+{
+    background-color: #5CA941;
+}
+#news
+{
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 10px;
+    height: 400px;
+    background: white;
+    border-radius: 10px;
+    border: 1px solid #D8DEE2;
+    padding: 10px;
+    font-size: 14px;
+    line-height: 50px;
+}
+#footer
+{
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: #9B9B9B;
+}

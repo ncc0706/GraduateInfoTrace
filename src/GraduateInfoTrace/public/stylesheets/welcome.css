@@ -1,0 +1,39 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+#welcome
+{
+	top: 0px;
+	border: solid 1px #065FB9;
+	margin-left:auto;
+	margin-right:auto;
+	top: 0px;
+	width: 1000px;
+	height: 600px;
+}
+#welcome-news
+{
+	float: left;
+	padding: 0px;
+	margin: 0px;
+	width: 700px;
+	height: 600px;
+}
+#welcome-login
+{
+	float: left;
+	padding: 0px;
+	margin: 0px;
+	width: 300px;
+	height: 600px;
+}
+.title
+{
+	font-size:14px;
+
+}
+.content
+{
+	font-size:10px;
+}

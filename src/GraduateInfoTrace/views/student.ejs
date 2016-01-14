@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <script src="/javascripts/jquery-min.js"></script>
+    <script src="/javascripts/underscore-min.js"></script>
+    <script src="/javascripts/backbone-min.js"></script>
+    <script src="/javascripts/backbone-localStorage-min.js"></script>
+    <script src="/javascripts/student.js"></script>
+    <link rel='stylesheet' href='/stylesheets/student.css'/>
+</head>
+<body>
+<div id="app">
+</div>
+<% include footer.ejs %>
+</body>
+<script type="text/template" id="tpl-more">
+    <div class="content">
+        <img class="logo" src="/images/logo.png">
+        <span class="welcome">欢迎<%= name %><%= role %>!</span>
+
+        <div id="more">
+            <span class="title">更多</span>
+
+            <div class="ops unshow">
+                <span class="bot"></span>
+                <button id="ops-profile">个人信息</button>
+                <button id="ops-setting">账户设置</button>
+                <button id="ops-logout">注销</button>
+            </div>
+        </div>
+    </div>
+</script>
+<script type="text/template" id="tpl-infos">
+    <div class="items">
+        <p>基本信息</p>
+        <span class="title">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</span>
+        <span class="static">{{name}}</span><br>
+        <br>
+
+        <span class="title">邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱</span>
+        <span class="info">
+            <span class="disp">{{email}}</span>
+            <span class="edit">
+                <input class="info" type="email" name="email" id="email">
+            </span>
+        </span><br>
+        <br>
+
+        <span class="title">电&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;话</span>
+        <span class="info">
+            <span class="disp">{{phone}}</span>
+            <span class="edit">
+                <input class="info" type="text" name="phone" id="phone" pattern="[0-9]{11}">
+            </span>
+        </span><br>
+        <br>
+    </div>
+
+    <div class="items">
+        <p>学生信息</p>
+        <span class="title">毕业年份</span>
+        <span class="info">
+            <span class="disp">{{time}}</span>
+            <span class="edit">
+                <select class="info" name="time" id="time">
+                    <option value="2009">2009</option>
+                    <option value="2010">2010</option>
+                    <option value="2011">2011</option>
+                    <option value="2012">2012</option>
+                    <option value="2013">2013</option>
+                    <option value="2014">2014</option>
+                    <option value="2015">2015</option>
+                    <option value="2016">2016</option>
+                </select>
+            </span>
+        </span><br>
+        <br>
+
+        <span class="title">学&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;院</span>
+        <span class="info">
+            <span class="disp">{{academy}}</span>
+            <span class="edit">
+                <select class="info" name="academy" id="academy">
+                    <option value="机械与汽车工程学院">机械与汽车工程学院</option>
+                    <option value="电气与自动化工程学院">电气与自动化工程学院</option>
+                    <option value="计算机与信息学院">计算机与信息学院</option>
+                    <option value="管理学院">管理学院</option>
+                    <option value="数学学院">数学学院</option>
+                    <option value="外国语学院">外国语学院</option>
+                    <option value="马克思主义学院">马克思主义学院</option>
+                </select>
+            </span>
+        </span><br>
+        <br>
+
+    </div>
+
+    <div class="items">
+        <p>就业信息</p>
+        <span class="title">公司名称</span>
+        <span class="info">
+            <span class="disp">{{company}}</span>
+            <span class="edit">
+                <input class="info" type="text" name="company" id="company">
+            </span>
+        </span><br>
+        <br>
+
+        <span class="title">公司地点</span>
+        <span class="info">
+            <span class="disp">{{province}}</span>
+            <span class="edit">
+                <select class="info" name="province" id="province">
+                    <option value="北京">北京</option>
+                    <option value="江西">江西</option>
+                    <option value="安徽">安徽</option>
+                    <option value="甘肃">甘肃</option>
+                    <option value="青海">青海</option>
+                    <option value="广西">广西</option>
+                    <option value="贵州">贵州</option>
+                    <option value="重庆">重庆</option>
+                    <option value="福建">福建</option>
+                    <option value="广东">广东</option>
+                    <option value="西藏">西藏</option>
+                    <option value="新疆">新疆</option>
+                    <option value="海南">海南</option>
+                    <option value="宁夏">宁夏</option>
+                    <option value="陕西">陕西</option>
+                    <option value="山西">山西</option>
+                    <option value="湖北">湖北</option>
+                    <option value="湖南">湖南</option>
+                    <option value="四川">四川</option>
+                    <option value="云南">云南</option>
+                    <option value="河北">河北</option>
+                    <option value="河南">河南</option>
+                    <option value="辽宁">辽宁</option>
+                    <option value="山东">山东</option>
+                    <option value="天津">天津</option>
+                    <option value="江苏">江苏</option>
+                    <option value="上海">上海</option>
+                    <option value="浙江">浙江</option>
+                    <option value="吉林">吉林</option>
+                    <option value="内蒙古">内蒙古</option>
+                    <option value="黑龙江">黑龙江</option>
+                    <option value="香港">香港</option>
+                    <option value="澳门">澳门</option>
+                    <option value="台湾">台湾</option>
+                </select>
+            </span>
+        </span><br>
+        <br>
+
+    </div>
+
+    <button id="save">更新信息</button>
+</script>
+<script type="text/template" id="tpl-pics">
+    <form id="uploadPic">
+        <img id="avatar" src="/avatar/1"/>
+        <input id="file" type="file" name="file"/>
+        <input id="setPic" type="button" value="设置头像">
+    </form>
+</script>
+<script type="text/template" id="tpl-setting">
+    <form id="changepwd" action="" onsubmit="return false">
+        <p class="title">修改口令</p>
+        <p class="item">输入旧口令</p>
+        <input type="password" name="oldpwd">
+        <p class="item">输入新口令</p>
+        <input type="password" name="newpwd">
+        <p class="item">新口令确认</p>
+        <input type="password" name="confirmpwd"><br>
+        <p class="item">验证码  <img id= "code" src="/code/1"></p>
+        <input type="text" name="veri"><br>
+        <button id="updatepwd">修改口令</button>
+    </form>
+</script>
+</html>

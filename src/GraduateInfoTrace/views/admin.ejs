@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <script src="/javascripts/jquery-min.js"></script>
+    <script src="/javascripts/underscore-min.js"></script>
+    <script src="/javascripts/backbone-min.js"></script>
+    <script src="/javascripts/backbone-localStorage-min.js"></script>
+    <script src="/javascripts/admin.js"></script>
+    <link rel='stylesheet' href='/stylesheets/admin.css'/>
+</head>
+<body>
+<div id="app">
+</div>
+<div id="content">
+    <div id="users-show">
+        <p class="cname">用户列表</p>
+        <li class="title">
+            <span>编号</span>
+            <span>姓名</span>
+            <span>角色</span>
+            <span>操作</span>
+        </li>
+    </div>
+    <div id="user-add">
+    </div>
+</div>
+<% include footer.ejs %>
+</body>
+<script type="text/template" id="tpl-more">
+    <div class="content">
+        <img class="logo" src="/images/logo.png">
+        <span class="welcome">欢迎<%= name %><%= role %>!</span>
+
+        <div id="more">
+            <span class="title">更多</span>
+            <div class="ops unshow">
+                <span class="bot"></span>
+                <button id="ops-self">个人资料</button>
+                <button id="ops-users">用户资料</button>
+                <button id="ops-logout">注销</button>
+            </div>
+        </div>
+    </div>
+</script>
+<script type="text/template" id="tpl-user">
+    <span class="show">{{id}}</span>
+    <span class="show">{{name}}</span>
+    <span class="show">{{role}}</span>
+    <span><button>重置密码</button></span>
+</script>
+<script type="text/template" id="tpl-add">
+    <p class="add-title">添加用户</p>
+    <label class="add">姓名</label>
+    <input class="add" type="text" id="name-add"><br/>
+    <label class="add">角色</label>
+    <select class="add" id="role-add">
+        <option value="student">学生</option>
+        <option value="teacher">教师</option>
+    </select><br>
+    <button id="addUser">添加</button>
+</script>
+<script type="text/template" id="tpl-admin">
+    <p class="title">管理员个人信息界面</p>
+    <p class="info">帐&nbsp;&nbsp;号：<span>{{id}}</span></p>
+    <p class="info">用户名：<span>{{name}}</span></p>
+</script>
+</html>
